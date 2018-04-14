@@ -307,7 +307,7 @@ nav a:focus {
 /*--start-home--*/
 .main {
 	float: right;
-    width: 85%;
+    width: 100%;
     padding: 0;
 }
 .banner-section{
@@ -1920,7 +1920,7 @@ ul.bottom i {
 	}
 	.main {
 		float: right;
-		width: 75%;
+		width: 100%;
 		padding: 0;
 	}
 	.banner-section {
@@ -2472,7 +2472,7 @@ ul.bottom i {
 		float: right;
 		width: 100%;
 		padding: 0;
-		margin-top: 10em;
+		/*margin-top: 10em;*/
 	}
 	.sign-up-form {
 		padding: 2em 1em;
@@ -2772,7 +2772,7 @@ ul.bottom i {
 		float: right;
 		width: 100%;
 		padding: 0;
-		margin-top: 6em;
+		/*margin-top: 6em;*/
 	}
 }
 @media (max-width:375px){
