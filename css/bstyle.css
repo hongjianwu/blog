@@ -33,3 +33,12 @@ body{
 	border-bottom: 1px solid #E5E5E5;
 	font-family: Arial,Helvetica,sans-serif;
 }
+.bheader-new .bh-wrap{
+	position: relative;
+	height: 38px;
+	font-size: 12px;
+	border-top: 1px solid #555;
+	border-bottom: 3px solid #85c155;
+	line-height: 1.5;
+	padding:0 15px;
+}
