@@ -56,3 +56,7 @@ body{
 	width: 650px;
 	padding-top: 10px;
 }
+.bside{
+	float: right;
+	width:290px;
+}
