@@ -18,10 +18,10 @@ head {
 body{
 	min-width: 1030px;	
 }
-bheader-wrap{
+.bheader-wrap{
 	height: 43px;
 }
-bheader-new{
+.bheader-new{
 	width: 100%;
 	min-width: 1030px;
 	height: 42px;
