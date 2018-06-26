@@ -42,3 +42,16 @@ body{
 	line-height: 1.5;
 	padding:0 15px;
 }
+.bwrap{
+	display: block;
+	min-width: 1%;
+	padding:0 15px;
+	width:990px;
+	margin:0 auto;
+	font-size: 12px;
+}
+.bmain{
+	position: relative;
+	float: left;
+	width: 650px;
+}
