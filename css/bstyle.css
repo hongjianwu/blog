@@ -1,0 +1,35 @@
+html, 
+body, 
+div, 
+span{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+html{
+	display: block;	
+}
+head {
+    display: none;
+}
+body{
+	min-width: 1030px;	
+}
+bheader-wrap{
+	height: 43px;
+}
+bheader-new{
+	width: 100%;
+	min-width: 1030px;
+	height: 42px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 990;
+	background: #884242;
+	border-bottom: 1px solid #E5E5E5;
+	font-family: Arial,Helvetica,sans-serif;
+}
