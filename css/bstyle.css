@@ -17,53 +17,59 @@ head {
     display: none;
 }
 body{
-	min-width: 1030px;	
+	min-width: 1030px;
+	background: #f6f6f6;	
 }
 .bheader-wrap{
 	height: 43px;
 }
 .bheader-new{
 	width: 100%;
-	min-width: 1030px;
-	height: 42px;
+	min-width: 1032px;
+	height: 52px;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 990;
-	background: #4C4C4C;
-	border-bottom: 1px solid #E5E5E5;
+	z-index: 100;
+	background: #fff;
 	font-family: Arial,Helvetica,sans-serif;
+	box-shadow: 0 1px 3px rgba(26,26,26,.1);
+	background-clip: content-box;
 }
 .bheader-new .bh-wrap{
 	position: relative;
-	height: 38px;
+	height: 48px;
 	font-size: 12px;
-	border-top: 1px solid #555;
-	border-bottom: 3px solid #85c155;
+/*	border-top: 1px solid #555;
+	border-bottom: 3px solid #85c155;*/
 	line-height: 1.5;
 	padding:0 15px;
 }
 .bwrap{
 	display: block;
 	min-width: 1%;
-	padding:0 15px;
-	width:990px;
-	margin:0 auto;
+	padding: 0 16px;
+	width:1000px;
+	margin:10px auto;
 	font-size: 12px;
 }
 .bmain{
 	position: relative;
 	float: left;
-	width: 650px;
+	width: 694px;
 	padding-top: 10px;
 }
 .bside{
 	float: right;
-	width:290px;
+	width:296px;
 }
 .main-title{
-	background: #7d5555;
+	background: #fff;
 	margin-bottom: 10px;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(26,26,26,.1);
+	box-sizing: border-box;
+	overflow: hidden;
 }
 .main-header{
 	line-height: 58px;
@@ -72,7 +78,11 @@ body{
 .main-content{
 	padding: 16px 20px;
 	margin-top: 10px;
-	background: #805757;
+	background: #fff;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(26,26,26,.1);
+	box-sizing: border-box;
 
 }
 .auth-info{
