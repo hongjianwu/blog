@@ -10,7 +10,7 @@ span{
 	font-size: 15px;
 	vertical-align: baseline;
 }
-html{
+html,div{
 	display: block;	
 }
 head {
@@ -46,22 +46,41 @@ body{
 	padding:0 15px;
 }
 .bwrap{
-	display: block;
+/*	display: block;
 	min-width: 1%;
 	padding: 0 16px;
 	width:1000px;
 	margin:10px auto;
-	font-size: 12px;
+	font-size: 12px;*/
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align:start;
+	align-items: flex-start;
+	position: relative;
+	width: 1000px;
+	padding: 0 16px;
+	margin:10px auto;
 }
 .bmain{
 	position: relative;
 	float: left;
 	width: 694px;
 	padding-top: 10px;
+	margin-right: 10px;
 }
 .bside{
 	float: right;
 	width:296px;
+	
+	overflow: hidden;
+	-webkit-box-flex:1;
+	flex: 1;
+	padding-top: 10px;
+
+}
+.bside-top{
+	background: #fff;
 }
 .main-title{
 	background: #fff;
