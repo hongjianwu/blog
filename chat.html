@@ -35,7 +35,7 @@
     })
 
     function link () {
-        ws = new WebSocket("ws://192.168.33.10:9501");//连接服务器
+        ws = new WebSocket("ws://192.168.33.10:8080");//连接服务器
         ws.onopen = function(event){
             console.log(event);
             alert('连接了');
