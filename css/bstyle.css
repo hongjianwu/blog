@@ -1,0 +1,134 @@
+html, 
+body, 
+div,
+img, 
+span{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 15px;
+	vertical-align: baseline;
+}
+html,div{
+	display: block;	
+}
+head {
+    display: none;
+}
+body{
+	min-width: 1030px;
+	background: #f6f6f6;	
+}
+.bheader-wrap{
+	height: 43px;
+}
+.bheader-new{
+	width: 100%;
+	min-width: 1032px;
+	height: 52px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background: #fff;
+	font-family: Arial,Helvetica,sans-serif;
+	box-shadow: 0 1px 3px rgba(26,26,26,.1);
+	background-clip: content-box;
+}
+.bheader-new .bh-wrap{
+	position: relative;
+	height: 48px;
+	font-size: 12px;
+/*	border-top: 1px solid #555;
+	border-bottom: 3px solid #85c155;*/
+	line-height: 1.5;
+	padding:0 15px;
+}
+.bwrap{
+/*	display: block;
+	min-width: 1%;
+	padding: 0 16px;
+	width:1000px;
+	margin:10px auto;
+	font-size: 12px;*/
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align:start;
+	align-items: flex-start;
+	position: relative;
+	width: 1000px;
+	padding: 0 16px;
+	margin:10px auto;
+}
+.bmain{
+	position: relative;
+	float: left;
+	width: 694px;
+	padding-top: 10px;
+	margin-right: 10px;
+}
+.bside{
+	float: right;
+	width:296px;
+	
+	overflow: hidden;
+	-webkit-box-flex:1;
+	flex: 1;
+	padding-top: 10px;
+
+}
+.bside-top{
+	background: #fff;
+}
+.main-title{
+	background: #fff;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(26,26,26,.1);
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.main-header{
+	line-height: 58px;
+	padding: 0 20px;
+}
+.main-content{
+	padding: 16px 20px;
+	margin-top: 10px;
+	background: #fff;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(26,26,26,.1);
+	box-sizing: border-box;
+
+}
+.auth-info{
+	margin-bottom: 14px;
+	font-size: 14px;
+	line-height: 1.75em;
+	overflow: hidden;
+	padding-top: 10px;
+	display: -webkit-box;
+	align-items: center; 
+	-webkit-box-align: center;
+	display: flex;
+}
+.main-content-title{
+	font-size: 18px;
+	font-weight: 600;
+	font-synthesis: style;
+	line-height: 1.6;
+	color: #1a1a1a;
+	margin-top: -4px;
+	margin-bottom: -4px;
+}
+.main-content-detail{
+	max-height: 100px;
+	margin-top: 9px;
+	margin-bottom: -4px;
+	overflow: hidden;
+	line-height: 1.67;
+
+}
