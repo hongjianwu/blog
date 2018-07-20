@@ -1,8 +1,8 @@
 <?php
 $serv = new swoole_server('0.0.0.0', 8080);
 $serv->set([
-	'reactor' => 2,
-	'worker_num' => 4,
+	'reactor' => 3,
+	'worker_num' => 2,
 	'daemonize' => true,
 	'backlog' => 128
 ]);
