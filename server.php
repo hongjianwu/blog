@@ -1,21 +1,22 @@
-<?php 
-//创建Server对象，监听 127.0.0.1:9501端口
-$serv = new swoole_server("127.0.0.1", 8080); 
+<?php
+$serv = new swoole_server('0.0.0.0', 8080);
+$serv->set([
+	'reactor' => 2,
+	'worker_num' => 4,
+	'daemonize' => true,
+	'backlog' => 128
+]);
 
-//监听连接进入事件
-$serv->on('connect', function ($serv, $fd) {  
-    echo "Client: Connect.\n";
+$serv->on('connect', function(){
+	echo "client:connect.\n";
+
 });
+$serv->on('receive', function($serv, $fd, $from_id, $data){
 
-//监听数据发送事件
-$serv->on('receive', function ($serv, $fd, $from_id, $data) {
-    $serv->send($fd, "Server: ".$data);
+	$serv->send($fd, 'swoole:'.$data);
+	$serv->close($fd);
 });
-
-//监听连接关闭事件
-$serv->on('close', function ($serv, $fd) {
-    echo "Client: Close.\n";
+$serv->on('close', function($serv, $fd){
+	echo "client:close\n";
 });
-
-//启动服务器
-$serv->start(); 
+$serv->start();
