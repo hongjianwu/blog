@@ -1,5 +1,5 @@
 <?php
-$serv = new swoole_server('0.0.0.0', 80);
+$serv = new swoole_server('120.78.51.75', 8080);
 $serv->set([
 	'reactor' => 3,
 	'worker_num' => 2,
