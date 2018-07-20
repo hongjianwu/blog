@@ -13,7 +13,7 @@ $serv->on('connect', function(){
 });
 $serv->on('receive', function($serv, $fd, $from_id, $data){
 
-	$serv->send($fd, 'swoole:'.$data);
+	$serv->send($fd, 'swoole1:'.$data);
 	$serv->close($fd);
 });
 $serv->on('close', function($serv, $fd){
