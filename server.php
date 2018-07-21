@@ -38,4 +38,4 @@ $server->addProcess($process);
 $server->on('receive', function($serv, $fd, $from_id, $data) use ($process){
 	$process->write($data);
 })
-$serv->start();
+$server->start();
