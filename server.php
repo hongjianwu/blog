@@ -19,4 +19,6 @@ $serv->on('receive', function($serv, $fd, $from_id, $data){
 $serv->on('close', function($serv, $fd){
 	echo "client:close\n";
 });
+$port = $serv->addlistener("0.0.0.0", 8080, SWOOLE_SOCK_TCP);
+echo $port->port;
 $serv->start();
