@@ -24,7 +24,7 @@
 
 
 
-$process = new swoole_server('0.0.0.0', 8080);
+$server = new swoole_server('0.0.0.0', 8080);
 $process = new swoole_process(function($process) use ($server){
 
 	while(true){
