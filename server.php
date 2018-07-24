@@ -1,41 +1,19 @@
 <?php
-//$serv = new swoole_server('0.0.0.0', 8080);
-// $serv->set([
-// 	'reactor' => 3,
-// 	'worker_num' => 2,
-// 	'daemonize' => true,
-// 	'backlog' => 128
-// ]);
-
-// $serv->on('connect', function(){
-// 	echo "client:connect.\n";
-
-// });
-// $serv->on('receive', function($serv, $fd, $from_id, $data){
-
-// 	$serv->send($fd, 'swoole'.$data."  fd:".$fd."  from_id:".$from_id);
-// 	$serv->close($fd);
-// });
-// $serv->on('close', function($serv, $fd){
-// 	echo "client:close\n";
-// });
-// $port = $serv->addlistener("0.0.0.0", 8080, SWOOLE_SOCK_TCP);
-// echo $port->port;
-
-
-
-$server = new swoole_server('0.0.0.0', 8080);
-$process = new swoole_process(function($process) use ($server){
-
-	while(true){
-		$msg = $process->read();
-		foreach ($server->connections  as $conn) {
-			$server->send($conn, $msg);
-		}
+$server = new swoole_websocket_server('0.0.0.0', 8080);
+$server->on('open', function(swoole_websocket_server $server, $request){
+	echo "server:handshake success with fd{$request->fd}\n";
+});
+$server->on('message', function(swoole_websocket_server $server, $frame){
+	echo "receive from {$frame->fd}:{$frame->data},opcode:{$frame->opcode}, find:{$frame->finish}\n";
+	$server->push($frame->fd, "this is server");
+});
+$server->on('close' , function($ser, $fd){
+	echo "client {$fd} closed\n";
+});
+$server->on('request', function(swoole_http_request $request, swoole_http_response $response){
+	global $server;
+	foreach ($server->connections  as $fd) {
+		$server->push($fd, $resquest->get['message']);
 	}
 });
-$server->addProcess($process);
-$server->on('receive', function($serv, $fd, $from_id, $data) use ($process){
-	$process->write($data);
-})
 $server->start();
